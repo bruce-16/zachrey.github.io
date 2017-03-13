@@ -88,7 +88,7 @@
 
 一、viewport的概念viewport就是设备上用来显示网页的那一块区域，再具体一点就是，就">
 <meta property="og:type" content="article">
-<meta property="og:title" content="移动前端开发<viewport>深入理解">
+<meta property="og:title" content="移动前端开发viewport深入理解">
 <meta property="og:url" content="http://localhost/2017/03/13/移动前端开发-viewport-深入理解/index.html">
 <meta property="og:site_name" content="Zachrey">
 <meta property="og:description" content="一个网页在pc端和移动端能统一适配，关键因素就在于viewport。在移动设备上进行网页的重构或开发，首先得搞明白的就是移动设备上的viewport了，只有明白了viewport的概念以及弄清楚了跟viewport有关的meta标签的使用，才能更好地让我们的网页适配或响应各种不同分辨率的移动设备。
@@ -101,9 +101,9 @@
 <meta property="og:image" content="http://localhost/2017/03/13/移动前端开发-viewport-深入理解/5.png">
 <meta property="og:image" content="http://localhost/2017/03/13/移动前端开发-viewport-深入理解/6.png">
 <meta property="og:image" content="http://localhost/2017/03/13/移动前端开发-viewport-深入理解/7.png">
-<meta property="og:updated_time" content="2017-03-13T07:40:14.527Z">
+<meta property="og:updated_time" content="2017-03-13T07:48:46.122Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="移动前端开发<viewport>深入理解">
+<meta name="twitter:title" content="移动前端开发viewport深入理解">
 <meta name="twitter:description" content="一个网页在pc端和移动端能统一适配，关键因素就在于viewport。在移动设备上进行网页的重构或开发，首先得搞明白的就是移动设备上的viewport了，只有明白了viewport的概念以及弄清楚了跟viewport有关的meta标签的使用，才能更好地让我们的网页适配或响应各种不同分辨率的移动设备。
 
 一、viewport的概念viewport就是设备上用来显示网页的那一块区域，再具体一点就是，就">
@@ -141,7 +141,7 @@
 
 
 
-  <title> 移动前端开发<viewport>深入理解 | Zachrey </title>
+  <title> 移动前端开发viewport深入理解 | Zachrey </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -321,7 +321,7 @@
             
             
               
-                移动前端开发<viewport>深入理解
+                移动前端开发viewport深入理解
               
             
           </h1>
@@ -418,7 +418,7 @@
 <p>　　但是安卓设备就比较复杂了，有320px的，有360px的，有384px的等等，关于不同的设备ideal viewport的宽度都为多少，可以到<a href="http://viewportsizes.com" target="_blank" rel="external">http://viewportsizes.com</a>去查看一下，里面收集了众多设备的理想宽度。</p>
 <p>　　再总结一下：把移动设备上的viewport分为<strong>layout viewport</strong>  、 <strong>visual viewport</strong>   和 <strong>ideal viewport</strong>  三类，其中的ideal viewport是最适合移动设备的viewport，ideal viewport的宽度等于移动设备的屏幕宽度，只要在css中把某一元素的宽度设为ideal viewport的宽度(单位用px)，那么这个元素的宽度就是设备屏幕的宽度了，也就是宽度为100%的效果。ideal viewport 的意义在于，无论在何种分辨率的屏幕下，那些针对ideal viewport 而设计的网站，不需要用户手动缩放，也不需要出现横向滚动条，都可以完美的呈现给用户。</p>
 <h2 id="四、利用meta标签对viewport进行控制"><a href="#四、利用meta标签对viewport进行控制" class="headerlink" title="四、利用meta标签对viewport进行控制"></a>四、利用meta标签对viewport进行控制</h2><p>　　移动设备默认的viewport是layout viewport，也就是那个比屏幕要宽的viewport，但在进行移动设备网站的开发时，我们需要的是ideal viewport。那么怎么才能得到ideal viewport呢？这就该轮到meta标签出场了。</p>
-<p>我们在开发移动设备的网站时，最常见的的一个动作就是把下面这个东西复制到我们的head标签中：<br><figure class="highlight plain"><figcaption><span>html</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0&quot;&gt;</div></pre></td></tr></table></figure></p>
+<p>我们在开发移动设备的网站时，最常见的的一个动作就是把下面这个东西复制到我们的head标签中：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0&quot;&gt;</div></pre></td></tr></table></figure></p>
 <p>　　该meta标签的作用是让当前viewport的宽度等于设备的宽度，同时不允许用户手动缩放。也许允不允许用户缩放不同的网站有不同的要求，但让viewport的宽度等于设备的宽度，这个应该是大家都想要的效果，如果你不这样的设定的话，那就会使用那个比屏幕宽的默认viewport，也就是说会出现横向滚动条。</p>
 <p>　　这个name为viewport的meta标签到底有哪些东西呢，又都有什么作用呢？</p>
 <p>　　meta viewport 标签首先是由苹果公司在其safari浏览器中引入的，目的就是解决移动设备的viewport问题。后来安卓以及各大浏览器厂商也都纷纷效仿，引入对meta viewport的支持，事实也证明这个东西还是非常有用的。</p>
@@ -438,20 +438,20 @@
 </ul>
 <p>特别说明的是，当 target-densitydpi=device-dpi 时， css中的1px会等于物理像素中的1px。</p>
 <p>因为这个属性只有安卓支持，并且安卓已经决定要废弃<del>target-densitydpi</del>  这个属性了，所以这个属性我们要避免进行使用。</p>
-<h2 id="五、把当前的viewport宽度设置为-ideal-viewport-的宽度"><a href="#五、把当前的viewport宽度设置为-ideal-viewport-的宽度" class="headerlink" title="五、把当前的viewport宽度设置为 ideal viewport 的宽度"></a>五、把当前的viewport宽度设置为 ideal viewport 的宽度</h2><p>要得到ideal viewport就必须把默认的layout viewport的宽度设为移动设备的屏幕宽度。因为meta viewport中的width能控制layout viewport的宽度，所以我们只需要把width设为width-device这个特殊的值就行了。<br><figure class="highlight plain"><figcaption><span>html</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;</div></pre></td></tr></table></figure><br><img src="/2017/03/13/移动前端开发-viewport-深入理解/7.png" alt="各大移动端浏览器上的测试结果" title="各大移动端浏览器上的测试结果"></p>
+<h2 id="五、把当前的viewport宽度设置为-ideal-viewport-的宽度"><a href="#五、把当前的viewport宽度设置为-ideal-viewport-的宽度" class="headerlink" title="五、把当前的viewport宽度设置为 ideal viewport 的宽度"></a>五、把当前的viewport宽度设置为 ideal viewport 的宽度</h2><p>要得到ideal viewport就必须把默认的layout viewport的宽度设为移动设备的屏幕宽度。因为meta viewport中的width能控制layout viewport的宽度，所以我们只需要把width设为width-device这个特殊的值就行了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width&quot;&gt;</div></pre></td></tr></table></figure><br><img src="/2017/03/13/移动前端开发-viewport-深入理解/7.png" alt="各大移动端浏览器上的测试结果" title="各大移动端浏览器上的测试结果"></p>
 <p>　　可以看到通过width=device-width，所有浏览器都能把当前的viewport宽度变成ideal viewport的宽度，但要注意的是，在iphone和ipad上，<strong>无论是竖屏还是横屏，宽度都是竖屏时ideal viewport的宽度</strong>。</p>
 <p>　　这样的写法看起来谁都会做，没吃过猪肉，谁还没见过猪跑啊~，确实，我们在开发移动设备上的网页时，不管你明不明白什么是viewport，可能你只需要这么一句代码就够了。</p>
-<p>这样的设置，也能达到相同的结果<br><figure class="highlight plain"><figcaption><span>html</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1&quot;&gt;</div></pre></td></tr></table></figure></p>
+<p>这样的设置，也能达到相同的结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;initial-scale=1&quot;&gt;</div></pre></td></tr></table></figure></p>
 <p>这句代码也能达到和前一句代码一样的效果，也可以把当前的的viewport变为 ideal viewport。</p>
 <p>因为从理论上来讲，这句代码的作用只是不对当前的页面进行缩放，也就是页面本该是多大就是多大。那为什么会有 width=device-width 的效果呢？</p>
 <p>要想清楚这件事情，首先你得弄明白这个缩放是相对于什么来缩放的，因为这里的缩放值是1，也就是没缩放，但却达到了 ideal viewport 的效果，所以，那答案就只有一个了，缩放是相对于 ideal viewport来进行缩放的，当对ideal viewport进行100%的缩放，也就是缩放值为1的时候，不就得到了 ideal viewport吗？事实证明，的确是这样的。下图是各大移动端的浏览器当设置了<meta name="viewport" content="initial-scale=1"> 后是否能把当前的viewport宽度变成 ideal viewport 的宽度的测试结果。</p>
 
 <p>测试结果表明 initial-scale=1 也能把当前的viewport宽度变成 ideal viewport 的宽度，但这次轮到了windows phone 上的IE 无论是竖屏还是横屏都把宽度设为竖屏时ideal viewport的宽度。但这点小瑕疵已经无关紧要了。</p>
-<p>但如果width 和 initial-scale=1同时出现，并且还出现了冲突呢？比如：<br><figure class="highlight plain"><figcaption><span>html</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=400, initial-scale=1&quot;&gt;</div></pre></td></tr></table></figure></p>
+<p>但如果width 和 initial-scale=1同时出现，并且还出现了冲突呢？比如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=400, initial-scale=1&quot;&gt;</div></pre></td></tr></table></figure></p>
 <p>　　width=400表示把当前viewport的宽度设为400px，initial-scale=1则表示把当前viewport的宽度设为ideal viewport的宽度，那么浏览器到底该服从哪个命令呢？是书写顺序在后面的那个吗？不是。当遇到这种情况时，浏览器会取它们两个中较大的那个值。例如，当width=400，ideal viewport的宽度为320时，取的是400；当width=400， ideal viewport的宽度为480时，取的是ideal viewport的宽度。（ps:在uc9浏览器中，当initial-scale=1时，无论width属性的值为多少，此时viewport的宽度永远都是ideal viewport的宽度）</p>
-<p>最后，总结一下，要把当前的viewport宽度设为ideal viewport的宽度，既可以设置 width=device-width，也可以设置 initial-scale=1，但这两者各有一个小缺陷，就是iphone、ipad以及IE 会横竖屏不分，通通以竖屏的ideal viewport宽度为准。所以，<strong>最完美的写法应该是</strong>，两者都写上去，这样就 initial-scale=1 解决了 iphone、ipad的毛病，width=device-width则解决了IE的毛病：<br><figure class="highlight plain"><figcaption><span>html</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</div></pre></td></tr></table></figure></p>
+<p>最后，总结一下，要把当前的viewport宽度设为ideal viewport的宽度，既可以设置 width=device-width，也可以设置 initial-scale=1，但这两者各有一个小缺陷，就是iphone、ipad以及IE 会横竖屏不分，通通以竖屏的ideal viewport宽度为准。所以，<strong>最完美的写法应该是</strong>，两者都写上去，这样就 initial-scale=1 解决了 iphone、ipad的毛病，width=device-width则解决了IE的毛病：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</div></pre></td></tr></table></figure></p>
 <h2 id="六、结语"><a href="#六、结语" class="headerlink" title="六、结语"></a>六、结语</h2><p>首先如果不设置meta viewport标签，那么移动设备上浏览器默认的宽度值为800px，980px，1024px等这些，总之是大于屏幕宽度的。这里的宽度所用的单位px都是指css中的px，它跟代表实际屏幕物理像素的px不是一回事。</p>
-<p>第二、每个移动设备浏览器中都有一个理想的宽度，这个理想的宽度是指css中的宽度，跟设备的物理宽度没有关系，在css中，这个宽度就相当于100%的所代表的那个宽度。我们可以用meta标签把viewport的宽度设为那个理想的宽度，如果不知道这个设备的理想宽度是多少，那么用device-width这个特殊值就行了，同时initial-scale=1也有把viewport的宽度设为理想宽度的作用。所以，我们可以使用<br><figure class="highlight plain"><figcaption><span>html</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</div></pre></td></tr></table></figure></p>
+<p>第二、每个移动设备浏览器中都有一个理想的宽度，这个理想的宽度是指css中的宽度，跟设备的物理宽度没有关系，在css中，这个宽度就相当于100%的所代表的那个宽度。我们可以用meta标签把viewport的宽度设为那个理想的宽度，如果不知道这个设备的理想宽度是多少，那么用device-width这个特殊值就行了，同时initial-scale=1也有把viewport的宽度设为理想宽度的作用。所以，我们可以使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;</div></pre></td></tr></table></figure></p>
 <p>　　来得到一个理想的viewport（也就是前面说的ideal viewport）。</p>
 <p>　　为什么需要有理想的viewport呢？比如一个分辨率为320x480的手机理想viewport的宽度是320px，而另一个屏幕尺寸相同但分辨率为640x960的手机的理想viewport宽度也是为320px，那为什么分辨率大的这个手机的理想宽度要跟分辨率小的那个手机的理想宽度一样呢？这是因为，只有这样才能保证同样的网站在不同分辨率的设备上看起来都是一样或差不多的。实际上，现在市面上虽然有那么多不同种类不同品牌不同分辨率的手机，但它们的理想viewport宽度归纳起来无非也就 320、360、384、400等几种，都是非常接近的，理想宽度的相近也就意味着我们针对某个设备的理想viewport而做出的网站，在其他设备上的表现也不会相差非常多甚至是表现一样的。</p>
 
@@ -521,7 +521,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2017/03/13/移动前端开发-viewport-深入理解/"
-           data-title="移动前端开发<viewport>深入理解" data-url="http://localhost/2017/03/13/移动前端开发-viewport-深入理解/">
+           data-title="移动前端开发viewport深入理解" data-url="http://localhost/2017/03/13/移动前端开发-viewport-深入理解/">
       </div>
     
   </div>
