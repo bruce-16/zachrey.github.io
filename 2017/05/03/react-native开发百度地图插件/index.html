@@ -107,7 +107,7 @@
 <meta property="og:image" content="http://localhost/2017/05/03/react-native开发百度地图插件/3.png">
 <meta property="og:image" content="http://localhost/2017/05/03/react-native开发百度地图插件/4.png">
 <meta property="og:image" content="http://localhost/2017/05/03/react-native开发百度地图插件/5.png">
-<meta property="og:updated_time" content="2017-05-03T07:57:33.031Z">
+<meta property="og:updated_time" content="2017-05-03T07:59:24.123Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="react-native开发百度地图插件">
 <meta name="twitter:description" content="参考官网： 开发原生UI组件（http://reactnative.cn/docs/0.43/native-component-android.html#content）
@@ -445,6 +445,7 @@
 <p><strong>MainActivity</strong>不需要动。</p>
 <p>以上在android studio进行的开发完毕，现在转移到react-native里面的js开发。<br>创建一个模板：<br>比如<strong>BaiduMap.js</strong><br>内容如下：</p>
 <p>使用：<br><strong>MyBaiduMap.js：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">import React, &#123;Component&#125; from &apos;react&apos;;</div><div class="line">import &#123;</div><div class="line">  View,</div><div class="line">  Text,</div><div class="line">  StyleSheet</div><div class="line">&#125; from &apos;react-native&apos;;</div><div class="line">var  BaiduMap = require(&apos;../AndroidView/BaiduMap&apos;);   //获取之前创建的模板</div><div class="line">class BaiduMapView extends Component &#123;</div><div class="line">  render()&#123;</div><div class="line">    return (</div><div class="line">      &lt;View style=&#123;&#123;flex: 1&#125;&#125;&gt;</div><div class="line">        &lt;BaiduMap style=&#123;&#123;height: &apos;100%&apos;, width: &apos;100%&apos;&#125;&#125;   //注意， 最好设置高宽。</div><div class="line">          mode=&#123;1&#125;   //这里就是依次的props</div><div class="line">          trafficEnabled=&#123;false&#125;</div><div class="line">          heatMapEnabled=&#123;false&#125;</div><div class="line">        &gt;&lt;/BaiduMap&gt;</div><div class="line">      &lt;/View&gt;</div><div class="line">    );</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line">export default BaiduMapView;</div></pre></td></tr></table></figure>
 <p>百度地图初步的展示，到这里就ok了。（花了两天的时间，知道了react-native还能这样用。android studio能配合调试原生插件，只要先开启react-native服务（react-native start），然后在运行android studio的调试系统。设置断点是一样的。）。</p>
 
       
