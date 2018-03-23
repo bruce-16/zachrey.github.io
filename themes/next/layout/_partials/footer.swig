@@ -37,7 +37,7 @@
 {% if theme.seo %}
   {% set nofollow = ' rel="external nofollow"' %}
 {% endif %}
-
+<!--
 {% if theme.footer.powered %}
   <div class="powered-by">{#
   #}{{ __('footer.powered', '<a class="theme-link" target="_blank"' + nofollow + ' href="https://hexo.io">Hexo</a>') }}{#
@@ -47,6 +47,7 @@
 {% if theme.footer.powered and theme.footer.theme.enable %}
   <span class="post-meta-divider">|</span>
 {% endif %}
+
 
 {% if theme.footer.theme.enable %}
   <div class="theme-info">{#
@@ -62,3 +63,4 @@
   #}{{ theme.footer.custom_text }}{#
 #}</div>
 {% endif %}
+-->
