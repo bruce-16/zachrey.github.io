@@ -6,15 +6,15 @@ menu:
 
 # SubNav
 subnav:
-  github: "#"
+  github: "https://github.com/zachrey/"
   weibo: "#"
   rss: "#"
-  zhihu: "#"
+  #zhihu: "#"
   #qq: "#"
   #weixin: "#"
-  #jianshu: "#"
+  jianshu: "https://www.jianshu.com/u/87b7913891f2"
   #douban: "#"
-  #segmentfault: "#"
+  segmentfault: "https://segmentfault.com/u/zachrey"
   #bilibili: "#"
   #acfun: "#"
   #mail: "mailto:litten225@qq.com"
@@ -37,7 +37,7 @@ excerpt_link: more
 # 文章卡片右下角常驻链接，不需要请设置为false
 show_all_link: '展开全文'
 # 数学公式
-mathjax: false
+mathjax: true
 # 是否在新窗口打开链接
 open_in_new: false
 
@@ -45,7 +45,7 @@ open_in_new: false
 # 打赏type设定：0-关闭打赏； 1-文章对应的md文件里有reward:true属性，才有打赏； 2-所有文章均有打赏
 reward_type: 2
 # 打赏wording
-reward_wording: '谢谢你请我吃糖果'
+reward_wording: '谢谢你请我喝咖啡'
 # 支付宝二维码图片地址，跟你设置头像的方式一样。比如：/assets/img/alipay.jpg
 alipay: 
 # 微信二维码图片地址
@@ -57,7 +57,7 @@ toc: 1
 # 根据自己的习惯来设置，如果你的目录标题习惯有标号，置为true即可隐藏hexo重复的序号；否则置为false
 toc_hide_index: true
 # 目录为空时的提示
-toc_empty_wording: '目录，不存在的…'
+toc_empty_wording: '404 Not Found'
 
 # 是否有快速回到顶部的按钮
 top: true
@@ -68,7 +68,7 @@ google_analytics: ''
 favicon: /favicon.png
 
 #你的头像url
-avatar:
+avatar: 
 
 #是否开启分享
 share_jia: true
@@ -107,8 +107,7 @@ style:
 # slider的设置
 slider:
   # 是否默认展开tags板块
-  showTags: false
-
+  showTags: true
 # 智能菜单
 # 如不需要，将该对应项置为false
 # 比如
