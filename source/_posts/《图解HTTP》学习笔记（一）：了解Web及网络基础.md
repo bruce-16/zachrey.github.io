@@ -1,0 +1,45 @@
+---
+title: 《图解HTTP》学习笔记（一）：了解Web及网络基础
+date: 2018-03-24 14:27:42
+tags:
+- HTTP
+- TCP/IP
+categories: HTTP
+---
+
+- HTTP通常被翻译为“超文本传输协议”，但是这样的译法并不严谨。严谨的译法应该是“超文本转移协议”。但是前一译法已经约定俗成。有兴趣的可以参考图灵社区的[相关讨论](http://www.ituring.com.cn/article/1817)。
+- 最初的设想的基本概念是：借助多文档之间相互关联形成的超文本（HyperText），连成可相互参阅的WWW(World Wide Web，万维网)。
+- 现在已经提出了3项WWW构建技术，分别是：把SGML（Standard Generalized Markup Language， 通用标记语言）作为页面的文本标记语言的HTML（HyperText Markup Language，超文本标记语言）；作为文档传递协议的HTTP；指定文档所在地址的URL（Uniform Resource Locator， 统一资源定位符）。
+<!-- more -->
+- WWW : 这一名称，是 Web 浏览器当年用来浏览超文本的客户端应用
+程序时的名称。现在则用来表示这一系列的集合，也可简称为 Web。
+- 网络基础 TCP/IP：我们通常使用的网络（包括互联网）都是基于TCP/IP协议上的。所以HTTP是它内部的一个子集。
+  - 层级：应用层、传输层、网络层、链路层
+  - 各层级作用
+
+    应用层：应用层决定了向用户应用提供服务时的通信活动，TCP/IP协议族内预存了各类通用的应用服务。比如，FTP（文件传输协议）和DNS（域名系统）服务就是其中两类。其中HTTP也是属于这层。
+
+    传输层：传输层对上层应用层，提供处于网络连接中的两台计算机之间的数据传输。有两个重要不同协议：TCP（传输控制协议）和UDP（用户数据报协议）。
+
+    网络层：网络层用来处理在网络上流动的数据包。该层规定了通过怎么样的路径到达目的计算机，并把数据传送给对方。在于对方计算机之间通过多台计算机或网络设备进行传输时，网络层所起的作用就是在众多的选项内选择一条传输线路。
+
+    链路层：用来处理连接网络的硬件部分。硬件上的范畴均在链路层的作用范围内。（控制操作系统、硬件的设备光驱动、NIC。网卡等）
+  - 通信传输流图：
+    
+  ![TCP-IP层级图.png](http://upload-images.jianshu.io/upload_images/4061613-7ad61cb103a667b6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+  - 发送和接收：
+  ![发送过程.png](http://upload-images.jianshu.io/upload_images/4061613-7a2f4979aac0ac71.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+    发送端：由上直下，数据会经过层层的包裹，然后拆分成很多小报文包，然后发出。接收端：由下直上，数据会经过层层解包然后，将每个小报文组合成最终的数据。
+  - 整个发送接收图解：
+    
+   ![发送接收流向图.png](http://upload-images.jianshu.io/upload_images/4061613-0259730702e7085b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+- URI：统一资源标识符
+- URL：统一资源定位符 URL是URI的子集
+
+  （我的理解是， URI是一个资源的按特定规则取的“名字”，而URL是一个资源的地址，一个资源可以直接使用地址作为名字）
+
+> [github](https://github.com/zachrey/diagram-http) 欢迎Star，欢迎讨论
