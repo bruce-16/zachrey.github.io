@@ -16,6 +16,8 @@ categories: react-native
 4. 把这个视图管理类注册到应用程序包的**createViewManagers**里。
 5. 实现JavaScript模块
 
+<!-- more -->
+
 首先将react-native目录下的android目录用android studio打开：
 {% asset_img 1.png . %}
 之后就是对组件的开发过程了。

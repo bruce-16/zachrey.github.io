@@ -18,6 +18,7 @@ date: 2017-01-12 21:54:26
 * [git](https://www.git-scm.com/)
 * [nodejs](https://nodejs.org/en/)
 
+<!-- more -->
 
 ## 开始
 >现在是默认电脑已经安装好了以两个东西。

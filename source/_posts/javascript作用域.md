@@ -23,6 +23,8 @@ categories: "javascript"
 的气泡。
 {% asset_img 1.png 气泡 %}
 
+<!-- more -->
+
 1. 包含着整个全局作用域，其中只有一个标识符： foo 。
 2. 包含着 foo 所创建的作用域，其中有三个标识符： a 、 - bar 和 b 。
 3. 包含着 bar 所创建的作用域，其中只有一个标识符： c 。
