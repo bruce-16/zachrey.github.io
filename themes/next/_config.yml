@@ -153,7 +153,7 @@ site_state: true
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
 social:
-  GitHub: https://github.com/zachrey || github
+  #GitHub: https://github.com/zachrey
   简书: https://www.jianshu.com/u/87b7913891f2
   SegmentFault: https://segmentfault.com/u/zachrey
   #E-Mail: zz__0123@163.com || envelope
@@ -182,7 +182,7 @@ social_icons:
 # Usage: `permalink || title`
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the title and aria-label name.
-#github_banner: https://github.com/yourname || Follow me on GitHub
+github_banner: https://github.com/zachrey || Follow me on GitHub
 
 # Blog rolls
 links_icon: link
